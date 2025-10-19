@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Addiction Manager",
+  "version": "1.0.0",
+  "description": "Addiction management for YouTube.",
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": ["https://*.youtube.com/*"],
+  "permissions": ["scripting", "webNavigation"],
+  "background": { "service_worker": "background.js" }
+}
