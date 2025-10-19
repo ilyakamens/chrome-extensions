@@ -1,5 +1,6 @@
 if (location.pathname === '/') {
   const style = document.createElement('style');
+  style.id = 'home-page-suggested';
   style.textContent = `
     ytd-browse /* Home page suggested videos */
     {
@@ -7,6 +8,9 @@ if (location.pathname === '/') {
     }
   `;
   document.head.appendChild(style);
+} else {
+  const style = document.getElementById('home-page-suggested')
+  if (style) style.remove();
 }
 
 // Convert shorts to videos.
