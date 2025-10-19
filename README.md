@@ -6,7 +6,7 @@ Chrome extensions to make the internet more maneagable.
 
 ### YouTube
 
-Remove all the crap YouTube adds to suck you in for hours at a time.
+I uses four different Chrome extensions ([DF Tube](https://chromewebstore.google.com/detail/df-tube-distraction-free/mjdepdfccjgcndkmemponafgioodelna), [Block YouTube Feed](https://chromewebstore.google.com/detail/block-youtube-feed-homepa/lcpclaffcdiihapebmfgcmmplphbkjmd), [Unhook](https://chromewebstore.google.com/detail/unhook-remove-youtube-rec/khncfooichmfjbepaaaebmommgaepoid), [Youtube-shorts block](https://chromewebstore.google.com/detail/youtube-shorts-block/jiaopdjbehhjgokpphdfgmapkobbnmjp)) to get rid of all the YouTube crap designed to suck you in for hours at a time. I've consolidated all the functionality into one extension.
 
 ## Manual installation
 
