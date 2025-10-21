@@ -15,7 +15,7 @@ if (location.pathname === '/') {
 
 // Convert shorts to videos.
 if (location.pathname.startsWith('/shorts')) {
-  location.href = location.href.replace('shorts/', 'watch?v=');
+  location.replace(location.href.replace('shorts/', 'watch?v='));
 }
 
 if (location.pathname === '/watch') {
