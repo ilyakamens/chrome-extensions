@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-A collection of Chrome extensions (currently one: YouTube Addiction Manager). No build tools, package manager, or test framework — extensions are plain JS loaded directly as unpacked extensions via `chrome://extensions/`.
+A collection of Chrome extensions. No build tools, package manager, or test framework — extensions are plain JS loaded directly as unpacked extensions via `chrome://extensions/`.
 
 ## Architecture
 
@@ -13,6 +13,8 @@ Each extension lives in its own subdirectory (e.g., `youtube/`) with a MV3 `mani
 **`youtube/`** — Hides addictive YouTube UI elements (home feed, shorts, suggested videos, end screens). Two-file structure:
 - `background.js` — Re-injects the content script on SPA navigations via `chrome.webNavigation.onHistoryStateUpdated`
 - `content.js` — Injects `<style>` blocks with CSS `!important` overrides targeting YouTube's internal element selectors. Handles page-specific logic (home, shorts redirect, watch page)
+
+**`way2go/`** — Rewrites XHR requests to `www.goprogram.com` to remove the `www`. Uses `declarativeNetRequest` with a static ruleset — no JS needed.
 
 ## Development
 

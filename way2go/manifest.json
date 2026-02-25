@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Way2Go",
+  "version": "1.0",
+  "description": "Rewrites XHR requests to www.goprogram.com to remove the www",
+  "permissions": ["declarativeNetRequest"],
+  "host_permissions": ["*://www.goprogram.com/*"],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}
