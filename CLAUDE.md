@@ -16,6 +16,8 @@ Each extension lives in its own subdirectory (e.g., `youtube/`) with a MV3 `mani
 
 **`way2go/`** — Rewrites XHR requests to `www.goprogram.com` to remove the `www`. Uses `declarativeNetRequest` with a static ruleset — no JS needed.
 
+**`googlemapsdark/`** — Applies dark mode to Google Maps based on system `prefers-color-scheme`. Pure CSS — inverts page colors and re-inverts images/videos via a content script stylesheet.
+
 ## Development
 
 Load the extension folder as unpacked in `chrome://extensions/` with Developer Mode enabled. Reload the extension after changes.

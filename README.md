@@ -8,6 +8,14 @@ Chrome extensions to make the internet more maneagable.
 
 I used four different Chrome extensions ([DF Tube](https://chromewebstore.google.com/detail/df-tube-distraction-free/mjdepdfccjgcndkmemponafgioodelna), [Block YouTube Feed](https://chromewebstore.google.com/detail/block-youtube-feed-homepa/lcpclaffcdiihapebmfgcmmplphbkjmd), [Unhook](https://chromewebstore.google.com/detail/unhook-remove-youtube-rec/khncfooichmfjbepaaaebmommgaepoid), [Youtube-shorts block](https://chromewebstore.google.com/detail/youtube-shorts-block/jiaopdjbehhjgokpphdfgmapkobbnmjp)) to get rid of all the YouTube crap designed to suck you in for hours at a time. All the functionality has been consolidated into one extension.
 
+### Way2Go
+
+Rewrites XHR requests to `www.goprogram.com` to remove the `www`, fixing broken requests on the Way2Go site.
+
+### Google Maps Dark
+
+Google Maps doesn't follow the system dark/light mode preference. This extension fixes that — when your OS is in dark mode, Maps goes dark automatically.
+
 ## Manual installation
 
 1. Navigate to your Chrome extensions by putting the following in the address bar: chrome://extensions/
