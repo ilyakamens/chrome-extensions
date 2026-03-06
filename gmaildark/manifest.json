@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail Dark",
+  "version": "1.0",
+  "description": "Follows system dark/light mode on Gmail",
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "css": ["style.css"]
+    }
+  ]
+}
