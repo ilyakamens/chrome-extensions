@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "System Dark Mode",
+  "version": "1.0",
+  "description": "Applies dark mode to all websites based on system theme, with per-site toggle",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
