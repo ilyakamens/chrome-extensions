@@ -7,10 +7,22 @@ const CSS = `
   }
   img, video, picture, svg, [role="img"], [aria-label="photo" i],
   /* Avoid double re-invert on Google Maps where background-image divs are nested inside role="img" */
-  [style*="background-image"]:not([role="img"] *) {
+  [style*="background-image"]:not([role="img"] *),
+  /* Google Maps: label gradients over the Layers thumbnail and photo tiles, and the Street View canvas */
+  .s6ATEe, .KoY8Lc, [data-street-view] canvas {
     filter: invert(1) hue-rotate(180deg) !important;
   }
 }`;
+
+// Street View shares the map's canvas, so the URL is the only reliable signal.
+function flagStreetView() {
+  document.documentElement.toggleAttribute("data-street-view", /,3a,/.test(location.pathname));
+}
+
+if (location.hostname === "www.google.com" && location.pathname.startsWith("/maps")) {
+  flagStreetView();
+  navigation.addEventListener("currententrychange", flagStreetView);
+}
 
 function injectStyle() {
   if (document.getElementById(STYLE_ID)) return;
