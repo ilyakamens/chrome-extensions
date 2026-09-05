@@ -3,7 +3,14 @@
     filter: invert(1) hue-rotate(180deg) !important;
   }
 
-  img, video {
+  /* Re-invert imagery. .s6ATEe / .KoY8Lc are the label gradients over the
+     Layers thumbnail and the photo tiles; content.js flags Street View. */
+  img,
+  video,
+  [style*="background-image"],
+  .s6ATEe,
+  .KoY8Lc,
+  [data-street-view] canvas {
     filter: invert(1) hue-rotate(180deg) !important;
   }
 }
