@@ -19,7 +19,7 @@ function flagStreetView() {
   document.documentElement.toggleAttribute("data-street-view", /,3a,/.test(location.pathname));
 }
 
-if (location.hostname === "www.google.com" && location.pathname.startsWith("/maps")) {
+if (location.hostname.startsWith("www.google.") && location.pathname.startsWith("/maps")) {
   flagStreetView();
   navigation.addEventListener("currententrychange", flagStreetView);
 }

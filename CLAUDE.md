@@ -16,7 +16,7 @@ Each extension lives in its own subdirectory (e.g., `youtube/`) with a MV3 `mani
 
 **`way2go/`** — Rewrites XHR requests to `www.goprogram.com` to remove the `www`. Uses `declarativeNetRequest` with a static ruleset — no JS needed.
 
-**`googlemapsdark/`** — Applies dark mode to Google Maps based on system `prefers-color-scheme`. `style.css` inverts page colors and re-inverts imagery (images, videos, background-image elements, label overlays, and the Street View canvas). `content.js` flags Street View via a `data-street-view` attribute on `<html>` by watching the URL for `,3a,` with the Navigation API.
+**`googlemapsdark/`** — Applies dark mode to Google Maps based on system `prefers-color-scheme`. `style.css` inverts page colors and re-inverts imagery (images, videos, background-image elements, label overlays, and the Street View canvas). `content.js` flags Street View via a `data-street-view` attribute on `<html>` by watching the URL for `,3a,` with the Navigation API. The manifest `matches` list covers `www.google.<tld>/maps*` for every domain in https://www.google.com/supported_domains, since country domains like `www.google.com.my` serve Maps too.
 
 ## Development
 
